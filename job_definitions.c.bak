@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <unistd.h>
+#include <stdlib.h>
+#include "rag.h"
+#include "logger.h"
+#include "job_definitions.h"
+
+void job_function(void* arg) {
+job_definition* job = (job_definition*)arg;
+if (rag_request_resources(job->resources)) {
+char msg[100];
+sprintf(msg, "[Running] Job with priority %d", job->priority);
+log_event(msg);
+sleep(2);
+rag_release_resources(job->resources);
+log_event("[Done] Released resources.");
+} else {
+char msg[100];
+sprintf(msg, "[Deadlock] Could not acquire resources for priority %d", job->priority);
+log_event(msg);
+}
+free(job);
+}

@@ -1,0 +1,14 @@
+digraph RAG {
+    "JobA";
+    "R1";
+    "JobB";
+    "R2";
+    "JobA" -> "R1";
+    "JobA" -> "R2";
+    "R1" -> "JobA";
+    "R1" -> "JobB";
+    "JobB" -> "R1";
+    "JobB" -> "R2";
+    "R2" -> "JobA";
+    "R2" -> "JobB";
+}

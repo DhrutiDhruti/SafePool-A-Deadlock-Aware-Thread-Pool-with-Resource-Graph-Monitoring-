@@ -1,0 +1,5 @@
+Job A started
+Job B started
+Job B finished
+Job A finished
+❌ Deadlock detected!
