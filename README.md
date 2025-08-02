@@ -88,6 +88,6 @@ This graph indicates a cycle between JobA and JobB through R1 and R2, signaling 
 
 ## Author
 
-Darshit Verma  
+Dhruti Dobariya
 M.Tech Computer Science  
 BITS Pilani, Hyderabad Campus
